@@ -7,21 +7,20 @@
 **requirements.txt**: Some libraries and their versions required for the demo to run on Heroku.  
 **run.py**: flask back end code  
 
-Deploy the demo on Heroku:
+## Install the Heroku CLI  
+### Download and install the Heroku CLI.  
+### If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.  
+$ heroku login
 
-```
-mkdir /home/heroku/comment-rating     # Create local code working directory
-cd /home/heroku/comment-rating        # Switch to the local code working directory
-git init                                    # Create a local code base
-heroku git:remote -a comment-rating   # Connect to the remote Heroku flask-bjhee code base
-```
-Push local git repository to Heroku remote repository:
-```
-git add .
-git commit -m "New update"
-git push heroku master 
-```
-See website deployment effect:
-```
-heroku open
-```
+
+## Clone the repository  
+### Use Git to clone comment-rating-system's source code to your local machine.  
+$ heroku git:clone -a comment-rating-system
+$ cd comment-rating-system  
+
+
+## Deploy your changes
+### Make some changes to the code you just cloned and deploy them to Heroku using Git.
+$ git add .  
+$ git commit -am "make it better"  
+$ git push heroku master  
