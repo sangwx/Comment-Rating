@@ -5,7 +5,6 @@ from sklearn.externals import joblib
 
 app = Flask(__name__)
 
-
 NB0 = joblib.load("static/model/NB0.pkl")
 vectorizer0 = joblib.load("static/model/vectorizer0.pkl")
 
@@ -15,7 +14,8 @@ vectorizer1 = joblib.load("static/model/vectorizer1.pkl")
 NB2 = joblib.load("static/model/NB2.pkl")
 vectorizer2 = joblib.load("static/model/vectorizer2.pkl")
 
-@app.route('/', methods=['POST','GET'])
+
+@app.route('/', methods=['POST', 'GET'])
 def predicted():
     if request.method == 'POST':
         sentence = request.form['sentence']
@@ -31,7 +31,6 @@ def predicted():
 
     print(sentence)
     return render_template('web.html', rating=rating[0], sentence=sentence)
-
 
 
 if __name__ == '__main__':
