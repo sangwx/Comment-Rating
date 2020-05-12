@@ -1,6 +1,4 @@
 from flask import Flask, redirect, url_for, request, render_template
-import re
-import numpy as np
 from sklearn.externals import joblib
 
 app = Flask(__name__)
