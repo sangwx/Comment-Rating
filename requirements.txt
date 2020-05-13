@@ -1,4 +1,4 @@
 scikit-learn
 Flask==1.1.2
-gunicorn==19.4.5
+gunicorn==19.5.0
 numpy==1.18.2
